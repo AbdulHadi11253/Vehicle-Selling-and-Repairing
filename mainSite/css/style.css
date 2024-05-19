@@ -1,0 +1,2812 @@
+/*------------------------------------------------------------------
+[Main Stylesheet]
+
+Project:    Car House
+Version:    1.1
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Body
+    2. Top Header / .top-header
+    3. Main Header / .main-header
+        3.1. Navigation / .navbar
+            3.1.1. Logo / navbar-brand-logo
+    4. Home Page Banner / .banner
+    5. Single Page Banner / .page-banner
+        5.1. Breadcrumb / breadcrumb-area
+    5. Content Area / .content-area
+        5.1 Option Bar / .option-bar
+        5.2 Car Box / .car-box
+            5.2.1. Car Content (Grid Page)/ .car-content
+            5.2.2  Car Box Body (List Page) / .car-box-body
+        5.3. Sidebar / .sidebar
+            5.3.1. Single Block / .search-block
+    6. Car Details / .car-details
+        6.1. Single Details Slider / .car-detail-slider
+            6.1.1. Carousel / #carousel-custom
+        6.2.Car Details Content / .car-details-content-body
+        6.3. User Comments / .comments-box
+        6.4. Right Sidebar / .car-sidebar-right
+            6.4.1. Car Info / .car-detail-block
+            6.4.2. Dealer Info / .dealer-contact
+            6.4.3. Social Share / .share
+            6.4.4. Private Message / .private-message
+            6.4.5 Recent News / .Recent-new
+    7. Contact Us / .contact-us-body
+        7.1. Contact Form / .contact-form
+        7.2 Contact Info / .contact-details
+        7.3 Social Media / .share
+    8. Testimonials / .testimonials
+    9. Main Footer  / .main-footer
+        8.1. Footer Item / .footer-item
+    10.  Sub Footer / .sub-footer
+    11. Login / .login-page-body
+        11.1. Form / .form-content-box
+    12. 404 Page / .page-content-404
+            12.1. Content / .error404
+-------------------------------------------------------------------*/
+
+/** COMMON CSS START **/
+body {
+    font-family: 'Lato', sans-serif;
+    background: #F5F5F5 ;
+}
+
+/** TOP HEADER AREA START **/
+.top-header {
+    background-color: #0066FF;
+    border-bottom: 1px solid #0066FF;
+    padding: 7px 0px;
+}
+top-header-main{
+    background-color: #0066FF !important;
+}
+.top-header .list-inline {
+    margin-top: 6px;
+    margin-bottom: 0px;
+}
+
+.list-inline {
+    padding-left: 0;
+    margin-left: -5px;
+    list-style: none;
+}
+
+.list-inline li {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.list-inline li a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.list-inline li a i {
+    margin-right: 10px;
+}
+
+.top-buttons {
+    text-align: right;
+}
+
+.btn-grey {
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+.btn-grey:hover,
+.btn-grey:focus,
+.btn-grey.focus,
+.btn-grey:active,
+.btn-grey.active {
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.35);
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+.btn-group-sm>.btn, .btn-sm {
+    padding: 4px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+}
+
+/** MAIN-HEADER AREA START **/
+.main-header {
+    background: white;
+}
+
+.navbar-default {
+    background: none;
+    border: none;
+    margin-bottom: 0px;
+    border-radius: 0px;
+}
+
+.main-header .navbar-default .nav > li > a {
+    display: block;
+    padding: 5px 20px;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #686868;
+}
+
+.main-header .navbar-default .nav > li > a:hover {
+    background: #f5f5f5;
+    color: #0B57D0;
+    border: none;
+}
+
+.main-header .navbar-default .nav > li > .active {
+    color: #0B57D0;
+    background: #f5f5f5;
+}
+
+.main-header .navbar-default .nav {
+    margin-top: 32px;
+}
+
+.navbar-brand-logo {
+    float: left;
+    padding: 23px 0px;
+}
+
+.navbar-brand-logo img {
+    height: 50px;
+}
+
+.dropdown-menu > li > a {
+    display: block;
+    padding: 15px 20px;
+    text-transform: uppercase;
+    font-size: 12px;
+    border-left: solid 5px white;
+    border-bottom: solid 1px white;
+    background: none;
+}
+
+.dropdown-menu > li > a:hover {
+    border-left: solid 5px #0B57D0;
+    background: none;
+    border-bottom: solid 1px #f1f1f1;
+}
+
+.nav .open > a,
+.nav .open > a:focus,
+.nav .open > a:hover {
+    background-color: #f5f5f5;
+    border-color: #ffffff;
+}
+
+/** BANNER AREA START **/
+.banner {
+    width: 100%;
+    color: white;
+    position: relative; /* Add position relative to create a stacking context */
+}
+
+.banner .item {
+    height: 768px;
+    position: relative;
+}
+
+.item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center; /* Center the background image */
+    opacity: 0.7; /* Adjust the opacity as needed */
+}
+
+.item-1::before {
+    background-image: url("../img/banner/slide1.jpg");
+}
+
+.item-2::before {
+    background-image: url("../img/banner/slide2.jpg");
+}
+
+/* Add a transition for smoother effects */
+.item::before {
+    transition: opacity 0.5s ease;
+}
+
+.item:hover::before {
+    opacity: 0.9; /* Adjust the hover opacity as needed */
+}
+
+/* Customize the control buttons */
+.carousel-control.left,
+.carousel-control.right {
+    background: none;
+    font-size: 2em; /* Increase the font size */
+}
+
+/* Customize the slider mover buttons */
+.slider-mover-left,
+.slider-mover-right {
+    width: 40px;
+    height: 40px;
+    line-height: 40px; /* Make line-height equal to height for vertical centering */
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: inline-block;
+    background: #1B1410;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Adjust the position of the slider mover buttons */
+.slider-mover-left {
+    left: 5px;
+}
+
+.slider-mover-right {
+    right: 5px;
+}
+
+/* Add a subtle box-shadow to the slider mover buttons */
+.slider-mover-left:hover,
+.slider-mover-right:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Customize the text inside the slider inner */
+.banner-slider-inner-1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.banner-slider-inner-1 .Website-text {
+    font-family: 'Oleo Script', cursive;
+    font-size: 60px;
+    color: #FFD700; /* Customize the color */
+}
+
+.banner-slider-inner-1 h1,
+.banner-slider-inner-1 h2 {
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: 900;
+    color: #FF4500; /* Customize the color */
+}
+
+.banner-slider-inner-1 h2 {
+    font-size: 40px;
+}
+
+.banner-slider-inner-1 h4 {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 27px;
+    color: #808080; /* Customize the color */
+}
+
+.banner-slider-inner-1 span {
+    font-weight: 300;
+    color: #808080; /* Customize the color */
+}
+
+
+@media only screen and (max-width: 767px) {
+    .item{
+        background-color: #3d3d3d;
+    }
+    .item::before{
+        /* background-size: contain; */
+       background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .banner-slider-inner-1{
+        display: flex;
+        justify-content: auto;
+        flex-direction: column;
+       margin-top: 70px;
+    }
+}
+
+
+/** display Cars **/
+.DreamCar {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.content-area {
+    padding: 50px 0;
+}
+
+.option-bar {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.option-bar .section-heading {
+    margin-bottom: 20px;
+}
+
+.option-bar .sorting-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.option-bar .sorting {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    color: #333333;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.option-bar .sorting:hover {
+    background: #f0f0f0;
+}
+
+.change-view-btn, .active-view-btn {
+    background-color: #0B57D0;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.change-view-btn:hover, .active-view-btn:hover {
+    background-color: #1E97FE;
+}
+
+.car-box {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.thumbnail > img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.car-box:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.car-box .sale {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #0B57D0;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.car-box .car-content {
+    padding: 15px;
+}
+
+.car-box .car-content h3 a {
+    color: #333333;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.car-box .car-content h3 a:hover {
+    color: #0B57D0;
+}
+
+.car-box .car-content h3 span {
+    color: #0B57D0;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.car-box .car-content p {
+    color: #666666;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.details-button {
+    background-color: #0B57D0;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.details-button:hover {
+    background-color: #1E97FE;
+}
+
+/**TESTIMONIALS AREA START **/
+
+
+/**FOOTER AREA START **/
+
+
+footer {
+    width: 100%;
+    background: #2A2A2A;
+    padding: 60px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-row {
+    margin-right: -15px;
+    margin-left: -15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+@media (max-width: 768px) {
+    .footer-row {
+        flex-direction: column;
+    }
+}
+footer p {
+    color: #ffffff;
+}
+
+.footer-item .footer-item-content p {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.footer-item-content img {
+    height: 50px;
+}
+
+.footer-item .footer-item-content ul {
+    margin-bottom: 20px;
+    padding: 0px;
+}
+
+.footer-item .footer-item-content ul li {
+    list-style: none;
+    line-height: 30px;
+}
+
+.gallery-item > a > img {
+    height: 50px;
+    width: 50px;
+}
+
+.footer-item .footer-item-content ul li a i {
+    width: 25px;
+}
+
+.footer-item .footer-item-content ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.social-list li {
+    list-style: none;
+    /* float: left; */
+    margin: 0px 3px 3px 0px;
+}
+
+.social-list li a {
+    font-size: 12px;
+    border-radius: 3px 2px 2px 3px;
+    display: inline-block;
+    width: 25px;
+    height: 26px;
+    text-align: center;
+    line-height: 28px;
+    color: white;
+}
+
+.social-list .facebook {
+    background: #3b589e;
+}
+
+.social-list .twitter {
+    background: #2b97f0;
+}
+
+.social-list .linkedin {
+    background: #1c82ca;
+}
+
+.social-list .google {
+    background: #dc4e41;
+}
+
+.social-list .rss {
+    background: #e78733;
+}
+
+.social-list .vimeo {
+    background: #56d7fe;
+}
+
+footer .footer-item h2 {
+    color: #ffffff;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0px;
+}
+
+footer .footer-item .line-dec {
+    margin: 15px 0 30px;
+    width: 150px;
+    height: 2px;
+    background-color: #0B57D0;
+}
+
+footer .footer-item {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .footer-item .media .media-left img {
+    width: 70px;
+    height: 70px;
+}
+
+footer .footer-item .media .media-body a {
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 13px;
+    margin-top: 5px;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+footer .footer-item .media .media-body a:hover {
+    color: #0B57D0;
+}
+
+footer .footer-item .media .media-body .line-dec-o {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 40px;
+    height: 2px;
+    background-color: #0B57D0;
+}
+
+footer .footer-item .media .media-body span {
+    font-size: 15px;
+    font-weight: 700;
+    color: #0B57D0;
+}
+
+footer .footer-item .tags {
+    position: relative;
+    /* float: left; */
+    margin: 0px 9px 9px 0px;
+    border: 1px solid #424242;
+    border-radius: 3px;
+    padding: 5px 12px;
+    font-size: 10px;
+    font-weight: 400;
+    text-transform: capitalize;
+    z-index: 0;
+    text-decoration: none;
+    color: white;
+    letter-spacing: 1px;
+}
+
+footer .footer-item .tags:hover {
+    background: #0B57D0;
+    border: 1px solid #0B57D0;
+}
+
+footer .footer-item .gallery-item {
+    /* float: left; */
+    width: 50px;
+    height: 50px;
+    margin: 0 5px 5px 0px;
+}
+
+/**SUB FOOTER AREA START **/
+.sub-footer {
+    background-color: #3966FF;
+    width: 100%;
+    padding: 23px 0px;
+}
+
+.sub-footer p {
+    color: #ffffff;
+    font-size: 14px;
+    margin: 0 0 0px;
+}
+
+.sub-footer p span {
+    color: #ffffff;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.sub-footer ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.sub-footer ul li {
+    list-style: none;
+    float: right;
+    margin-left: 20px;
+}
+
+.sub-footer ul li a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 12px;
+    color: #ffffff;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    font-size: 24px;
+    margin: 0 10px;
+    color: #333; /* Change the color as needed */
+}
+
+/* Example: Change color on hover */
+.icon:hover {
+    color: #00f; /* Change the color on hover */
+}
+
+/**PAGE BANNER AREA START **/
+.page-banner {
+    width: 100%;
+    background-color: #0066FF;
+    padding: 60px 0px;
+    text-align: center;
+    color: white;
+}
+
+.breadcrumb-area {
+    padding: 35px 5px;
+    max-width: 555px;
+    margin: 0 auto; 
+}
+
+.breadcrumb-area h2 {
+    font-size: 45px;
+    font-weight: 700;
+    margin: 0 0 10px;
+}
+
+
+/**PAGINATION AREA START **/
+.pagination {
+    display: inline-block;
+    padding-left: 0;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+.pagination > li > a, .pagination > li > span {
+    border-radius: 0% !important;
+    margin: 0 5px 5px;
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    padding: 0px;
+    line-height: 34px;
+}
+
+.pagination > li > a, .pagination > li > span :hover {
+    color: #0B57D0;
+}
+
+.pagination > .active > a,
+.pagination > .active > a:focus,
+.pagination > .active > a:hover,
+.pagination > .active > span,
+.pagination > .active > span:focus,
+.pagination > .active > span:hover {
+    z-index: 3;
+    color: white;
+    cursor: default;
+    background-color: #0B57D0;
+    border-color: #0B57D0;
+}
+
+.pagination > .disabled > a,
+.pagination > .disabled > a:focus,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > span,
+.pagination > .disabled > span:focus,
+.pagination > .disabled > span:hover {
+    color: #0B57D0;
+    cursor: not-allowed;
+    background-color: #fff;
+    border-color: #ddd;
+}
+
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover {
+    background-color: #0B57D0;
+    color: white;
+}
+
+/**SIDEBAR AREA START **/
+.sidebar {
+    border-radius:3px;
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border: solid 1px #E4E3E3;
+}
+
+.search-block .title {
+    font-weight: 700;
+    border-left: 4px solid #0B57D0;
+    padding-left: 15px;
+    font-size: 18px;
+    color: #0B57D0;
+}
+
+.search-block .ratings li {
+    list-style: none;
+    padding: 6px 0px;
+    font-size: 12px;
+    border-bottom: 1px dotted #DDD;
+}
+
+.search-block .ratings li a {
+    text-decoration: none;
+}
+
+.search-block .ratings {
+    margin: 0px;
+    padding: 0px;
+}
+
+.search-block .ratings li span {
+    float: right;
+    color: #999;
+}
+
+.slider-price-amont {
+    font-size: 12px;
+    color: #999;
+    font-weight: 400;
+}
+
+.round {
+    background: #0B57D0;
+}
+
+.slider.slider-horizontal .slider-track {
+    height: 10px;
+    width: 100%;
+    margin-top: -5px;
+    top: 50%;
+    left: 0;
+    background: #0B57D0;
+    border-radius: 0px;
+}
+
+.slider.slider-horizontal .slider-selection {
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    background: #f5f5f5;
+}
+
+.slider.slider-horizontal .slider-handle {
+    margin-left: -10px;
+    margin-top: -5px;
+    border-radius: 0px;
+}
+
+/**PRICE-BOX AREA START **/
+.price-box label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 0px;
+    margin-right: 0px;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+.slider.slider-horizontal {
+    width: 100% !important;
+    height: 20px;
+}
+
+element.style {
+    width:none;
+}
+
+.price-box label:before {
+    width: 0px;
+    height: 0px;
+}
+
+.search-block label {
+    font-size: 11px;
+    line-height: 16px;
+    color: #434955;
+}
+
+.search-block .form-control {
+    border-radius: 3px;
+    box-shadow: none;
+    height: 36px;
+    border: 1px solid #EEE;
+}
+
+label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 25px;
+    margin-right: 15px;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+label:before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 20px;
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    background-color: transparent;
+    box-shadow: none;
+    border-radius: 0px;
+    border: solid 1px #b7b5b5;
+}
+
+input[type=checkbox] {
+    /*display: none;*/
+}
+
+input[type=checkbox]:checked + label:before {
+    content: "\2713";
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+    font-size: 15px;
+    color: #f3f3f3;
+    text-align: center;
+    line-height: 15px;
+}
+
+.checkbox label, .radio label {
+    min-height: 20px;
+    padding-left: 30px;
+    margin-bottom: 0;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.checkbox {
+    padding-left: 20px;
+}
+
+.checkbox label {
+    display: inline-block;
+    position: relative;
+    padding-left: 15px;
+}
+
+.checkbox label::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    left: 0;
+    margin-left: -20px;
+    border: 1px solid #cccccc;
+    border-radius: 0px;
+    background-color: #fff;
+    -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+    -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+    transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+.checkbox label::after {
+    display: inline-block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 0;
+    top: 0;
+    margin-left: -20px;
+    padding-left: 3px;
+    padding-top: 1px;
+    font-size: 11px;
+    color: #555555;
+}
+
+.checkbox-theme input[type="checkbox"]:checked + label::after {
+    color: #fff;
+}
+
+.checkbox-theme input[type="checkbox"]:checked + label::before {
+    background-color: #0B57D0;
+    border-color: #0B57D0;
+}
+
+.search-block .list-1 li {
+    list-style: none;
+    line-height: 30px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.search-block .list-1 li a {
+    text-decoration: none;
+    font-weight: 400;
+    color: #434955;
+}
+
+.search-block label {
+    font-size: 12px;
+    line-height: 16px;
+    color: #434955;
+}
+
+.search-block .list-1 {
+    padding: 0px;
+}
+
+/**RECENT-NEWS AREA START **/
+.Recent-news {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border: solid 1px #E4E3E3;
+    border-radius:3px;
+}
+
+.Recent-news .title {
+    font-weight: 700;
+    border-left: 4px solid #0B57D0;
+    padding-left: 15px;
+    font-size: 18px;
+    color: #0B57D0;
+    margin: 0px 0px 20px;
+}
+
+.Recent-news .media {
+    padding-bottom: 20px;
+    border-bottom: 1px dotted #DDD;
+    margin-top:0px;
+    margin-bottom:20px; 
+}
+
+.Recent-news .media:last-child {
+    border-bottom: none;
+    padding-bottom: 0px;
+    margin-bottom:0px; 
+}
+
+.Recent-news .media .media-body a {
+    color: #585858;
+    font-weight: 700;
+    font-size: 13px;
+    margin-top: 5px;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.Recent-news .media .media-body a:hover {
+    color: #0B57D0;
+}
+
+.Recent-news .media .media-body .line-dec-o {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 40px;
+    height: 2px;
+    background-color: #0B57D0;
+}
+
+.Recent-news .media .media-body span {
+    font-size: 15px;
+    font-weight: 700;
+    color: #0B57D0;
+}
+
+/**LIST-CAR AREA START **/
+.list-car-box {
+    background: white;
+    padding: 15px;
+    border: solid 1px #E4E3E3;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.list-car-box .list-car-pic img{
+    height:219px;
+}
+
+.list-car-box .car-content h3 a{
+    text-transform: uppercase;
+    color: #363f48;
+    border-left: 4px solid #0B57D0;
+    font-size: 17px;
+    padding: 3px 0px 3px 10px;
+    text-decoration: none;
+}
+
+.list-car-box  .car-content h3{
+    margin:15px 0 0px; 
+}
+
+.list-car-box  .car-content h3 a:hover{
+    color:#0B57D0;
+}
+
+.list-car-box  .car-content h3 span {
+    float: right;
+    background: #f5f5f5;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #0B57D0;
+}
+
+.s-lineDownLeft {
+    border-bottom: 1px solid #B4B4B4;
+    position: relative;
+}
+
+.list-car-box .car-content p {
+    font-size: 14px;
+    margin-bottom:20px;
+    color: #696969;
+    font-weight: 400;
+}
+
+.list-car-box .car-content .col-pad{
+    padding:0px;
+}
+
+.list-car-box .car-content {
+    padding:0px 15px 0px 0px;
+}
+
+.list-car-box .car-content  .item p{
+    font-size: 12px;
+    margin-bottom: 7px;
+}
+
+.list-car-box p span {
+    float: left;
+    margin-right: 15px;
+    color: #545454;
+    font-weight: bold;
+}
+
+/**CAR-DETAILS AREA START **/
+.car-details-header-price h3 {
+    font-size: 21px;
+    font-weight: 300;
+    margin: 0px 0px 5px 0px;
+    color: #0B57D0;
+}
+
+.car-details-header-price p {
+    margin: 0 0 0px;
+}
+
+.car-details-header-price p i{
+    color: orange;
+}
+
+#carousel-custom .carousel-indicators {
+    margin: 10px 0px 0px;
+    overflow: auto;
+    position: static;
+    text-align: left;
+    white-space: nowrap;
+    width: 100%;
+}
+
+#carousel-custom .carousel-indicators li {
+    background-color: transparent;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    display: inline-block;
+    height: auto;
+    margin: 0 !important;
+    width: auto;
+}
+
+#carousel-custom .carousel-indicators li img {
+    display: block;
+    opacity: 0.5;
+}
+
+#carousel-custom .carousel-indicators li.active img {
+    opacity: 1;
+}
+
+#carousel-custom .carousel-indicators li:hover img {
+    opacity: 0.75;
+}
+
+#carousel-custom .carousel-outer {
+    position: relative;
+}
+
+.thumb-preview {
+    height: 500px !important;
+    width: 100%;
+}
+
+.thumbs {
+    width: 82% !important;
+    margin: 12px auto !important;
+    background: #dde3e4;
+    padding: 10px 0px 6px 10px;
+}
+
+.thumbs img {
+    width: 80px;
+    height: 50px;
+}
+
+/**CAR-DETAILS-CONTENT-BOBY AREA START **/
+.car-details-content-body {
+    margin: 50px 0px 30px;
+}
+
+.panel-body p {
+    color: #666;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 22px;
+    margin-bottom: 20px;
+}
+
+.panel-default > .panel-heading {
+    color: #333;
+    background-color: white;
+    border-color: #ddd;
+    border-radius: 0px;
+}
+
+.panel-default {
+    background: none;
+}
+
+.panel-body {
+    background: white;
+    border: solid 1px #E4E3E3;
+    border-radius:3px;
+    padding: 35px;
+}
+
+.nav-tabs > li > a {
+    margin-right: 3px;
+    line-height: 1.42857143;
+    border-top: solid 2px white;
+    border-radius: 0px;
+    background: none;
+    color: black;
+    font-weight: bold;
+}
+
+.nav > li > a:hover {
+    text-decoration: none;
+    background-color: white;
+    color: #0B57D0;
+    border-top: solid 2px white;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover {
+    color: black;
+    cursor: default;
+    background-color: none;
+    border-top: solid 2px red;
+}
+
+.features ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.features ul li {
+    list-style: none;
+    line-height: 30px;
+    color: #666;
+    font-size: 13px;
+}
+
+.features ul li i {
+    font-size: 16px;
+    color: #0B57D0;
+    margin-right:15px;
+}
+
+.technical ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.technical ul li {
+    list-style: none;
+    font-weight: bold;
+    border-bottom: 1px dotted #d4cece;
+    line-height: 35px;
+    color: #666;
+}
+
+.technical ul li span {
+    float: right;
+    font-weight: 400;
+}
+
+/**COMMENTS-box AREA START **/
+.comments-box {
+     border: solid 1px #E4E3E3;
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 20px;
+    position: relative;
+    border-radius: 3px;
+    float: left;
+    width: 100%;
+}
+
+.comments-container {
+    position: relative;
+    padding: 0px 10px;
+    float: left;
+}
+
+.comments-box ul li {
+    list-style: none;
+}
+
+ul.blog-post-comments {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+ul.blog-post-comments ul {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    margin-left: 60px;
+    border-bottom: 0px solid #e1e1e1;
+    border-top: 0px solid #e1e1e1;
+}
+
+ul.blog-post-comments li ul li {
+    border-bottom: 0px solid #e1e1e1;
+    padding: 0px;
+}
+
+ul.blog-post-comments li {
+    padding: 20px 0px 20px 0px;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+ul.blog-post-comments li span.user-image {
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    border-radius: 50%;
+    background-color: #C5C5C5;
+    display: block;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    float: left;
+    margin-right: 10px;
+}
+
+ul.blog-post-comments li span.user-name {
+    color: #55595c;
+    font-size: 16px;
+    line-height: 22px;
+    display: inline-block;
+    text-align: center;
+}
+
+ul.blog-post-comments li span.date {
+    color: #878d92;
+    font-size: 14px;
+    line-height: 22px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    float: right;
+}
+
+
+ul.blog-post-comments li span.comment {
+    color: #878d92;
+    font-size: 14px;
+    line-height: 22px;
+    display: block;
+    text-align: left;
+    margin: 1px 0px 0px 60px;
+}
+
+ul.blog-post-comments li .comment-footer {
+    color: #878d92;
+    font-size: 14px;
+    line-height: 22px;
+    display: block;
+    text-align: left;
+    margin-left: 60px;
+    margin-top: 35px;
+}
+
+a.share-box {
+    color: #55595c;
+    font-size: 14px;
+    line-height: 22px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+a.share-box:hover {
+    cursor: pointer;
+}
+
+ul.blog-post-comments li span.user-image i {
+    color: #fff;
+    font-size: 38px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -3px;
+}
+
+a.share-box span.like i {
+    color: #db7560;
+}
+
+a.share-box span.respond i {
+    color: #65abd0;
+}
+
+a.share-box span.share-2 i {
+    color: #24aa98;
+}
+
+a.share-box i {
+    margin-right: 5px;
+}
+
+ul.blog-post-comments li span.date i {
+    color: #b4bbc2;
+    font-size: 14px;
+    line-height: 22px;
+    margin-right: 8px;
+}
+
+.btn-send {
+    background: #0B57D0;
+    border: none;
+    border-radius: 0px;
+    padding: 10px 30px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.btn-send:hover {
+    background: #1E97FE;
+    color: white;
+}
+
+/**CAR-SIDEBAR AREA START **/
+.car-sidebar-right .title {
+    font-size: 19px;
+    line-height: 26px;
+    border-left: solid 4px #0B57D0;
+    padding: 0px 0px 0px 20px;
+    margin:0 0 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #0B57D0;
+}
+
+.car-detail-block {
+     border: solid 1px #E4E3E3;
+    padding: 30px 30px;
+    background: white;
+    border-radius:3px;
+    width: 100%;
+    float: left;
+}
+
+.car-detail-block .car-detail-info-list li {
+    list-style: none;
+    line-height: 34px;
+    color: #999;
+    border-bottom: 1px dotted #DDD;
+    text-align: right;
+}
+
+.car-detail-info-list li span {
+    font-weight: bold;
+    margin-right: 10px;
+    float: left;
+    color: #3e3e3e;
+}
+
+.mrg-b-30 {
+    margin-bottom: 30px !important;
+}
+
+.dealer-contact {
+    padding: 30px 30px;
+    background: white;
+    border: solid 1px #E4E3E3;
+    border-radius: 3px;
+}
+
+.dealer-contact ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.car-detail-block .car-detail-info-list {
+    margin: 0px;
+    padding: 0px;
+}
+
+.dealer-contact ul li {
+    list-style: none;
+    line-height: 27px;
+    color: #999;
+}
+
+.dealer-contact ul li a{
+    text-decoration:none;
+    color:#999;
+}
+
+.dealer-contact ul li span {
+    font-weight: bold;
+    color: #3e3e3e;
+}
+
+.share {
+    background: #2a2a2a;
+    padding: 30px 30px;
+    width:100%;
+    float:left;
+}
+
+.share h2 {
+    color: #1E97FE;
+    font-weight: 400;
+    font-size: 19px;
+    border-left: solid 4px #fff;
+    padding-left: 20px;
+    text-transform: uppercase;
+    margin: 0 0 20px 0px;
+}
+
+.share ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+.private-message-to-dealer {
+    padding: 30px 30px;
+    background: white;
+    width: 100%;
+    border: solid 1px #E4E3E3;
+    border-radius: 3px;
+}
+
+/**ABOUT-BODY AREA START **/
+
+.video-section {
+    position: relative;
+}
+
+.video-background {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-bottom: 10%; /* 16:9 aspect ratio */
+}
+
+.video-background iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.text-overlay {
+    position: relative;
+    z-index: 1;
+    padding: 0px; /* Adjust padding as needed */
+    color: #fff; /* Text color */
+}
+
+.title {
+    font-weight: 700;
+    border-left: 4px solid #0B57D0;
+    padding-left: 15px;
+    font-size: 30px;
+    color: #0B57D0;
+    margin: 0 0 20px;
+}
+
+.text-justify {
+    color: #fff !important; /* Text color */
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.icon-list {
+    margin: 0 0 30px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.icon-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.icon-list li i {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+/**PANEL AREA START **/
+.panel-body {
+    padding: 35px;
+}
+
+.panel-div a {
+    text-decoration: none;
+}
+
+.panel-div .panel-default > .panel-heading {
+    color: #969595;
+    background-color: white;
+    padding: 13px 5px 13px 15px;
+    border-radius: 0px;
+    color: #0B57D0;
+}
+
+.panel-title i {
+    margin-right: 10px;
+    background: #0B57D0;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 0px;
+    color: white;
+}
+
+.panel-default {
+    border-color: white;
+    border: none;
+}
+
+.panel-group .panel + .panel {
+    margin-top: 15px;
+}
+
+.page-section p {
+    color: #444444 !important;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+/**ABOUT TEAM MEET AREA START **/
+
+
+/**SERVICESLIST AREA START **/
+/* Updated CSS */
+
+.serviceslist {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+}
+
+.serviceslist .title {
+    font-weight: bold;
+    font-size: 30px;
+    color: #333;
+    margin: 0 0 30px;
+    text-transform: uppercase;
+}
+
+.Services-box {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.Services-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.Services-box i {
+    font-size: 40px;
+    color: #0B57D0;
+    margin-bottom: 20px;
+}
+
+.Services-box h3 {
+    margin: 0 0 10px;
+    font-size: 24px;
+    color: #333;
+    text-transform: capitalize;
+}
+
+.Services-box p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/**CONTACT US BODY AREA START **/
+.contact-us-body {
+    width: 100%;
+    padding: 100px 0px;
+}
+
+.contact-form .title {
+    font-weight: 700;
+    border-left: 4px solid #0B57D0;
+    padding-left:25px;
+    font-size: 18px;
+    color: #0B57D0;
+    margin-bottom: 20px;
+}
+
+.contact-form form .input-text {
+    width: 100%;
+    padding:10px 17px;
+    font-size: 13px;
+    border: 1px solid #e8e7e7;
+    outline: none;
+    color: #6c6c6c;
+    height: 40px;
+    border-radius: 3px;
+    box-shadow:none;
+}
+
+.contact-form form textarea {
+    border: 1px solid #eeeeee;
+    max-width: 100%;
+    min-height: 170px;
+    max-height: 180px;
+    font-size: 12px;
+    color: #888888;
+    height: 40px;
+    padding: 12px 45px;
+    outline: none;
+}
+
+.contact-form .form-group{
+    margin-bottom: 25px;
+}
+
+.contact-form form .btn-message {
+    background: #0B57D0;
+    width: 100%;
+    text-transform: uppercase;
+    color: #fff;
+    height: 40px;
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-weight: 400;
+    border: solid 2px #ed5565;
+    border-radius: 0px;
+}
+
+.contact-us-body form .btn-message:hover{
+    background-color: #1E97FE;
+    color:#fff;
+}
+
+.contact-form form .btn-message:hover{
+    background-color: #1E97FE;
+    color:#fff;
+}
+
+.contact-details {
+    background: #fff;
+    border: solid 1px #E4E3E3;
+    border-bottom: none;
+}
+
+.contact-details .item {
+    padding: 12px 36px;
+    border-bottom: 1px solid #e5e7e9;
+}
+
+.contact-details .item .icon {
+    font-size: 36px;
+    line-height: 21px;
+    color: #0B57D0;
+    float: left;
+}
+
+.contact-details .content {
+    margin-left: 61px;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    color: #5d6e7b;
+}
+
+.contact-details .content h5 {
+    font-size: 15px;
+    line-height: 21px;
+    color: #0B57D0;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 0 6px;
+}
+
+.contact-details .content p span {
+    font-weight: bold;
+    color: #3e3e3e;
+}
+
+.contact-details .content p a {
+    text-decoration: none;
+    color: #5d6e7b;
+}
+
+/** FORM CONTENT AREA START **/
+.form-content-box {
+    padding: 54px;
+    max-width:555px;
+    background: white;
+    border: solid #EEE 1px;
+    margin:100px auto 0px; 
+}
+
+.logo-the {
+    margin-bottom: 20px;
+    text-align:center;
+}
+
+.form-content-box .logo-the img {
+    height: 52px;
+}
+
+.form-content-box h4 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #797979;
+    font-size: 15px;
+}
+
+.form-content-box form .input-text {
+    width: 100%;
+    padding-left:15px;
+    font-size: 13px;
+    height: 40px;
+    border: 1px solid #D8D8D8;
+    outline: none;
+    color: #9c9898;
+    border-radius: 0px;
+}
+
+.form-content-box label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 0px;
+    margin-right: 15px;
+    font-size: 13px;
+    margin-bottom: 10px;
+    text-align: left;
+    color: #929292;
+}
+
+label:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border: solid 0px red;
+}
+
+.lost-password a {
+    text-decoration: none;
+    color: #0B57D0;
+    font-weight: bold;
+}
+
+.lost-password {
+    font-size: 12px;
+    color: #929292;
+}
+
+.dhc {
+    font-size: 12px;
+    color: #929292;
+}
+
+.dhc a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #0B57D0;
+}
+
+.remember-me span{
+    margin-left:15px;
+}
+
+.form-content-box .btn-send{
+    height:55px;
+    margin-bottom:20px;
+}
+
+.form-content-box  .form-group {
+    margin-bottom: 20px;
+}
+
+/**PAGE CONTENT AREA START **/
+.page-content-404 {
+    width: 100%;
+    padding: 70px 0px;
+}
+
+.error404 {
+    position: relative;
+    margin: 40px auto;
+    max-width:500px;
+    text-align: center;
+}
+
+.error404 .e404 {
+    position: absolute;
+    left: 0;
+    top: 5%;
+    margin-top: 5%;
+    padding: 0 10%;
+    width: 100%;
+    text-align: center;
+}
+
+.error404 h1 {
+    margin: 0;
+    color: #fe5214;
+    font-weight: 700;
+    font-size: 108px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.error404 .title-error {
+    color: #1a1a1b;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.error404 p {
+    margin: 0 0 20px 0px;
+    color: #8a8585;
+}
+
+.error404 img{
+        margin-bottom:30px;
+    }
+    
+.btn-back {
+    background:#fe5214;
+    color:#fff;
+}
+
+.btn-back:hover{
+    background-color: #1E97FE;    
+    color:#fff;
+}
+
+
+/**BLOG BANNER AREA START **/
+.blog-banner {
+    text-align: center;
+    background: #2a2a2a;
+    padding: 35px 0px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.blog-body {
+    padding: 100px 0px 50px;
+}
+
+.blog-box {
+    margin-bottom: 50px;
+    border-radius: 0px;
+    padding: 0px;
+    border: none;
+    color: #7B7B7B;
+    background: transparent;
+}
+
+.blog-box .detail {
+    padding: 30px 0px 0px;
+    color: #7B7B7B;
+    width: 100%;
+    float: left;
+}
+
+.blog-box .detail h1 {
+    margin: 0 0 20px;
+    font-size: 27px;
+}
+
+.blog-box .detail h1 a {
+    text-decoration: none;
+    color:#0B57D0;
+}
+
+.blog-box .detail h1 a:hover{
+    color:#818a9c;
+}
+
+.blog-box .detail .header {
+    border-bottom: 1px solid #dddddd;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .5px;
+    color: #818a9c;
+    text-transform: uppercase;
+}
+
+.btn-read-more{
+    background:#0B57D0;
+    text-decoration:none;
+    border-radius:0px;
+    color:#fff;
+    font-size: 12px;
+    padding: 7px 14px;
+    letter-spacing: 1px;
+    font-weight: 700; 
+    text-transform: uppercase;
+}
+
+.btn-read-more:hover{
+    background-color: #1E97FE;
+    color:#fff;
+}
+
+.blog-box .detail .header a {
+    color:#0B57D0;
+    text-decoration: none;
+}
+
+.blog-box .detail .header .fa {
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.blog-box .detail p {
+    font-size: 14px;
+    line-height: 23px;
+    margin-bottom: 30px;
+}
+
+.blog-sidebar .Recent-news{
+    padding:0px;
+    border:none;
+    background:transparent;
+}
+
+.blog-tags {
+    margin-bottom:30px;
+    float:left;
+}
+
+.blog-tags .title {
+    font-weight: 700;
+    border-left: 4px solid #0B57D0;
+    padding-left: 15px;
+    font-size: 18px;
+    color: #0B57D0;
+    margin: 0px 0px 20px;
+}
+
+.blog-tags .tags {
+    position: relative;
+    float: left;
+    margin: 0px 9px 9px 0px;
+    border: 1px solid #e2e0e1;
+    border-radius: 3px;
+    padding: 5px 12px;
+    font-size: 11px;
+    font-weight: 400;
+    text-transform: capitalize;
+    z-index: 0;
+    text-decoration: none;
+    color:#696969;
+    background: #e2e0e1;
+    letter-spacing: 1px;
+}
+
+.blog-tags .tags:hover{
+    background:#0B57D0;
+    color:#fff;
+}
+
+/** RECENT COMMENTS AREA START **/
+.recent-comments{
+    margin-bottom:30px;
+}
+
+.recent-comments .title {
+    font-weight: 700;
+    border-left: 4px solid #0B57D0;
+    padding-left: 15px;
+    font-size: 18px;
+    color: #0B57D0;
+    margin: 0px 0px 20px;
+}
+
+.recent-comments .media {
+    margin: 0 0 20px;
+}
+
+.recent-comments .media .media-left {
+    padding-right: 25px;
+}
+
+.recent-comments .media .media-body p {
+    font-size: 13px;
+    line-height: 22px;
+    color: #7B7B7B;
+    margin-bottom: 0px;
+}
+
+.recent-comments .media .media-body span {
+    color: #b0b0b0;
+    font-size: 11px;
+}
+
+.recent-comments .media .media-left img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+}
+
+.blog-sidebar .dealer-contact{
+    padding:0px;
+    border:none;
+    background: transparent;
+}
+
+.blog-sidebar .dealer-contact .title {
+    font-size: 19px;
+    line-height: 26px;
+    border-left: solid 4px #0B57D0;
+    padding: 0px 0px 0px 20px;
+    margin: 0 0 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #0B57D0;
+}
+
+.blog-sidebar .dealer-contact ul li a{
+    text-decoration:none;
+    color:#727070; 
+}
+
+.blog-sidebar  .dealer-contact ul li{
+    color:#727070; 
+}
+
+.blog-banner h2 {
+    margin-top: 0px;
+    font-weight: 600;
+}
+
+.blog-box .detail p {
+    font-size: 15px;
+    line-height: 27px;
+    margin-bottom: 30px;
+}
+
+ .blog-theme img {
+    margin-top:30px;
+}
+
+.blog-banner .home:hover {
+    color: #dcdbdb;
+}
+
+.blog-banner a {
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.blog-banner .m0 {
+    margin: 0 5px;
+}
+
+blockquote {
+    border-left: 4px solid #0B57D0;
+    padding: 7px 40px;
+    margin: 30px 0px 30px 30px;
+    color: #444;
+    font-weight: 300 !important;
+    font-style: normal;
+    line-height: 26px;
+}
+
+.tags-box .title{
+    font-weight: 700;
+    border-left: 4px solid #0B57D0;
+    padding-left: 15px;
+    font-size: 25px;
+    color: #0B57D0;
+    margin: 0 0 20px;
+    text-transform: uppercase;
+}
+
+.tags-box a {
+    border: 1px solid #e2e0e1;
+    border-radius: 3px;
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: 400;
+    color: #696969;
+    background: #e2e0e1;
+    margin:0px 3px 3px;
+    text-decoration:none; 
+}
+
+.tags-box a:hover{
+    color:#fff;
+    background:#0B57D0;
+    border-radius: 3px;
+}
+
+.blog-share {
+    float: right;
+    text-align: right;
+    margin-top: 5px;
+}
+
+.blog-share ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.blog-share ul li {
+    list-style: none;
+    float: left;
+    position: relative;
+    padding: 0 15px;
+}
+
+.blog-share ul li h6 {
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 24px;
+    color: #000;
+    font-weight: 600;
+    margin: 0px;
+    letter-spacing: 0.5px;
+}
+
+.blog-share ul li a {
+    text-decoration: none;
+}
+
+.color-facebook {
+    color: #4867aa;
+}
+
+.color-twitter {
+    color: #33CCFF;
+}
+
+.color-google {
+    color: #db4437;
+}
+
+.color-linkedin {
+    color: #0177b5;
+}
+
+.blog-share ul li:last-child {
+    padding-right: 0;
+}
+
+.color-pinterest {
+    color: #bd081c;
+}
+
+a.tags {
+    position: relative;
+    float: left;
+}
+
+.bordered-right {
+    border-right: 1px solid rgba(22, 24, 27, .12) !important;
+}
+
+.blog-body .comments-box{
+    padding:0px;
+    border:none;
+    background:transparent;
+}
+
+.blog-body .comments-box .title {
+    font-weight: 700;
+    border-left: 4px solid #0B57D0;
+    padding-left: 15px;
+    font-size: 25px;
+    color: #0B57D0;
+    margin: 0 0 20px;
+    text-transform: uppercase;
+}
+
+.mrg-top{
+    margin-top:30px;
+}
+
+/** CONTENT BOTTOM AREA START **/
+
+.content-bottom {
+    max-width: 984px;
+    margin: 0px auto;
+}
+
+.bottom-block {
+    padding: 20px;
+    background: #f5f7f9;
+    margin-bottom: 30px;
+}
+
+.bottom-block h3 {
+    font-size: 16px;
+    margin: 0 0 15px;
+    font-weight: 600;
+}
+
+.bottom-block p {
+    font-size: 13px;
+    color: #939393;
+}
+
+.bottom-block label {
+    font-weight: 600;
+    font-size: 13px;
+    padding-left:0pc;
+}
+
+.bottom-block .input-form {
+    width: 100%;
+    color: #939393;
+    border: 1px solid #e8e7e7;
+    padding: 6px 12px;
+    height: 40px;
+    line-height: 40px;
+    background: #fff;
+    font-size: 13px;
+    outline: none;
+    border-radius: 3px;
+}
+
+.bottom-block h4 {
+    color: #939393;
+    font-size: 15px;
+    margin-top: 0px;
+}
+
+.bottom-block h1 {
+    margin-top: 0px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.bottom-block span {
+    margin-left: 20px;
+    color:#0B57D0;
+}
+
+.bottom-block a {
+    text-decoration: none;
+    color: #939393;
+}
+
+.bg {
+    background: #f7f7f7;
+}
+
+.btn-Proceed {
+    margin: 20px 0px;
+    float: left;
+}
+
+.bottom-block .mrg {
+    margin: 20px 0px;
+}
+
+.mrg-t-b{
+    margin:30px 0px; 
+}
+
+.mrg-btnn{
+    margin-bottom: 25px;
+}
+
+@media (max-width:450px) {
+    .features .col-pad{
+        width:100%;
+    }   
+    
+    .error404 .e404 {
+        top: 3%;
+        padding: 0px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-brand-logo img {
+        height: 37px;
+    }
+    
+    .Recent-news img{
+        width:60px;
+        height:60px;
+    }
+
+    .Recent-news .media .media-body a {
+       font-size:12px;
+    }
+
+    .Recent-news .media .media-body .line-dec-o {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .navbar-toggle {
+        position: relative;
+        float: right;
+        padding: 9px 10px;
+        margin-top: 32px;
+        margin-right: 0px;
+        margin-bottom: 8px;
+        background-color: transparent;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 0px;
+    }
+    
+    .banner-slider-inner-1 {
+        position: absolute;
+        top: 23%;
+        text-align:center;
+        padding:0px 20px 0px 20px;
+    }
+
+    .banner-slider-inner-1 h1 {
+        font-size: 27px;
+    }
+
+    .banner-slider-inner-1 h2 {
+        font-size:18px;
+    }
+
+    .banner-slider-inner-1 .Website-text {
+        font-size:25px;
+    }
+
+    .banner-slider-inner-1 h4 {
+        font-size: 15px;
+        line-height: 20px;
+    }
+    
+    .blog-body .comments-box .title{
+        font-size:19px;
+    } 
+    
+    ul.blog-post-comments li span.comment{
+        font-size:13px;
+        text-align: justify;
+        line-height:20px;
+    }
+
+    .tags-box .title{
+         font-size:19px;
+    }
+
+    .banner-slider-inner h1 {
+        text-transform: uppercase;
+        font-size: 28px; 
+    }
+    
+    .breadcrumb-area p a {
+        margin: 0px 4px;
+    }
+
+    .home-btn {
+        padding: 7px 18px;
+    }
+
+    .banner-slider-inner {
+        width: 100%;
+        text-align: center;
+    }
+
+    .banner .item {
+        height: 300px;
+    }
+
+    .list-car-box .list-car-pic img{
+        height:auto;
+    }
+
+    .slider-mover-left {
+        width: 30px;
+        height: 30px;
+        line-height: 27px;
+        left: 0px;
+        background: #1B1410;
+    }
+
+    .slider-mover-right {
+        width: 30px;
+        height: 30px;
+        line-height: 27px;
+        right: 0px;
+        background: #1B1410;
+    }
+
+    .slider-mover-right img {
+        width: 12px;
+        height: 19px;
+    }
+
+    .slider-mover-left img {
+        width: 12px;
+        height: 19px;
+    }
+
+    .breadcrumb-area h2 {
+        font-size: 28px;
+    }
+
+    .car-box .car-content h3 a {
+        font-size: 15px;
+   }   
+   
+    .list-car-box .car-content h3 a {
+        font-size: 15px;
+   }
+    
+    .testimonials-inner p {
+        padding:0px 5px;
+        line-height:28px;
+        text-align: justify;
+    }
+
+    .option-bar {
+        background: transparent;
+        border: none;
+        padding: 0px;
+    }
+
+    .option-bar .sorting-options {
+        margin-top: 20px;
+    }
+
+    .change-view-btn {
+        padding: 5px 8px;
+        margin-left: 2px;
+        float: left;
+    }
+
+    .active-view-btn {
+        padding: 5px 8px;
+        margin-left: 2px;
+    }
+
+    .active-view-btn:hover {
+        padding: 5px 8px;
+        margin-left: 2px;
+    }
+
+    .change-view-btn:hover {
+        padding: 5px 8px;
+        margin-left: 2px;
+    }
+
+    .option-bar .sorting {
+        padding: 6px 9px;
+        float:left;
+    }
+
+    .list-car-box .car-content {
+        padding: 0px 15px 0px 15px;
+    }
+    
+    .thumb-preview {
+        height: auto !important;
+        width: 100%;
+    }
+   
+    .pagination > li > a, .pagination > li > span {
+        margin: 0 3px 3px;
+        width: 28px;
+        height: 28px;
+        line-height: 28px;
+    }
+
+    .car-details-header-price {
+        text-align: left;
+    }
+
+    .nav-tabs>li {
+        float:none;
+        margin-bottom: -1px;
+   }   
+    
+    .panel-body {
+        padding: 15px;
+    }   
+
+    .panel-body {
+        text-align: justify;
+        padding:15px;
+    }   
+    
+    ul.blog-post-comments ul {
+        margin-left: 0px;
+    }   
+
+    .comments-container {
+        padding: 0px 0px;
+        text-align: justify;
+    }
+    
+    .car-detail-block{
+        padding:15px;
+    }
+
+    .car-detail-block .car-detail-info-list li{
+        font-size:12px;
+    }    
+
+    .dealer-contact {
+        padding: 15px;
+    }
+    
+    .car-sidebar-right .title {
+        font-size: 19px;
+    }
+
+    .share {
+        padding:15px;
+    }
+
+    .private-message-to-dealer{
+        padding:15px;
+    }
+
+    .Recent-news{
+        padding:15px;
+    }
+
+    .about-body .icon-list li {
+        list-style: none;
+        line-height: 23px;
+    }
+
+    .about-body .title {
+        font-size: 19px;
+        margin: 0 0 20px;
+    }
+
+    .panel-title {
+        font-size: 14px;
+    }
+
+    .serviceslist .title {
+        font-size: 19px;
+        margin-bottom:30px;
+    }
+
+    .contact-us-body .title {
+        font-size:19px;
+    }
+
+    .contact-details .item {
+        padding: 12px 20px;
+    }
+
+    .contact-details .content {
+        margin-left: 50px;
+        font-size: 13px;
+        line-height: 17px;
+    }       
+    
+    .footer-item-content img {
+         height: 40px;
+    }
+    
+    .form-content-box .logo-the img {
+        height: 40px;
+    }
+
+    .form-content-box {
+        padding:30px 15px;
+    }
+
+    .error404 h1 {
+        font-size: 65px;
+    }
+
+    .error404 .title-error {
+        font-size: 19px;
+    }
+
+    .blog-box .detail h1 {
+        font-size: 19px;
+    }
+
+    .blog-box .detail p{
+        text-align: justify;
+        font-size:13px;
+        line-height:20px;
+    }
+
+    blockquote {
+        padding: 7px 20px;
+        margin: 30px 0px 30px 00px;
+        text-align: justify;
+    }
+
+    .contact-us-body {
+        padding:50px 0px
+    }
+
+    .blog-body {
+        padding: 50px 0px 50px;
+    }
+
+    .page-section {
+        margin-bottom: 50px;
+    }
+    
+    .serviceslist {
+        padding:50px 0px 0px;
+    }
+
+    .about-team-meet {
+        padding: 50px 0px;
+    }
+
+    .about-body {
+        padding-top:50px;
+    }
+
+    .blog-banner h2 {
+        margin-top: 0px;
+        font-size:24px; 
+    }
+    }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .navbar-brand-logo img {
+        height: 35px;
+    }
+
+    .main-header .navbar-default .nav > li > a {
+        margin-left: 0px;
+        padding: 5px 10px;
+}
+}
+
+
+/* report_issue */
+/* feedbacktable start */
+
+/* Table styles */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  .table th, .table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .table th {
+    background-color: #f2f2f2;
+  }
+  
+  /* Download button */
+  .download-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
+  .download-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .report_issue{
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
