@@ -287,7 +287,7 @@ $all_social_address = mysqli_fetch_assoc($social_address);
                 </div>
             </div>
 
-            <!-- Add an empty column for spacing -->
+            <!-- Add an empty column ds for spacing --> 
             
         </div>
     </div>
